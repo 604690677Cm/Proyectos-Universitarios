@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+/* Navbar Login */
+
+.navbarLogin,.Intel{
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../img/intel3.webp");
+  background-size: cover;
+  background-position: center;
+
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.Logo{
+  color: #e9f4fb;
+  font-size: 28px;
+
+}
+span{
+  color: #2691d9;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+}
+nav ul li a{
+  color: #e9f4fb;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover{
+  color: #104d94;
+  transition: .3s;
+}
+
+.BtnNav{
+  border: none;
+  background: #104d94;
+  padding: 12px,30px;
+  border-radius: 30px;
+  color: #e9f4fb;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+}
+
+/* boton Intel */
+
+button,button::after {
+  padding: 10px 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  position: relative;
+}
+
+button::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: 'INTEL';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+button:hover::after {
+  animation: glitch_4011 1s;
+  text-shadow: 10 10px 10px black;
+  animation-timing-function: steps(2, end);
+  text-shadow: -3px -3px 0px #104d94, 3px 3px 0px #4995cf;
+  background-color: transparent;
+  border: 3px solid #104d94;
+}
+
+button:hover {
+  text-shadow: -1px -1px 0px #104d94, 1px 1px 0px #4995cf;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid #104d94;
+  box-shadow: 0px 10px 10px -10px #104d94;
+}
+
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px,-10px);
+  }
+
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px,10px);
+  }
+
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px,0px);
+  }
+
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px,-10px);
+  }
+
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px,10px);
+  }
+
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px,-10px);
+  }
+
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px,10px);
+  }
+
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px,-10px);
+  }
+
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
+}
+
+/* Inicio de la caja del login */
+
+.centro {
+  position: absolute;
+  top: 45%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  background: #333333;
+  border-radius: 10px;
+
+}
+
+.centro h1 {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: floralwhite;
+  text-align: center;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid floralwhite;
+
+}
+
+.centro form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .Campo_txt {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  position: relative;
+  border-bottom: 2px solid floralwhite;
+  margin: 30px 0;
+}
+
+.Campo_txt input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.Campo_txt label {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: floralwhite;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.Campo_txt span::before {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.Campo_txt input:focus~label,
+.Campo_txt input:valid~label {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  top: -5px;
+  color: #2691d9;
+}
+
+.Campo_txt input:focus~span::before,
+.Campo_txt input:valid~span::before {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  width: 100%;
+
+}
+
+.aprobar {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  margin: -5px 0 20px 5px;
+  color: floralwhite;
+  cursor: pointer;
+}
+
+.aprobar:hover {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #104d94;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: .5s;
+
+}
+
+.Registrarse {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: floralwhite;
+}
+
+.Registrarse a {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.Registrarse a:hover {
+  
+  text-decoration: underline;
+}

@@ -1,0 +1,331 @@
+/* falta acomodar el navbar */
+* {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #104d94;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e9f4fb;
+}
+
+/* css header */
+
+
+.navbarLogin,
+
+.Intel {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/intel3.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+nav {
+    display:flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.Logo {
+    color: #e9f4fb;
+    font-size: 28px;
+
+}
+
+span {
+    color: #2691d9;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #e9f4fb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #104d94;
+    transition: .3s;
+}
+
+.BtnNav {
+    border: none;
+    background: #104d94;
+    padding: 12px, 30px;
+    border-radius: 30px;
+    color: #e9f4fb;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+
+/* boton Intel */
+
+button,
+button::after {
+    padding: 10px 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    position: relative;
+}
+
+button::after {
+    --move1: inset(50% 50% 50% 50%);
+    --move2: inset(31% 0 40% 0);
+    --move3: inset(39% 0 15% 0);
+    --move4: inset(45% 0 40% 0);
+    --move5: inset(45% 0 6% 0);
+    --move6: inset(14% 0 61% 0);
+    clip-path: var(--move1);
+    content: 'INTEL';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+button:hover::after {
+    animation: glitch_4011 1s;
+    text-shadow: 10 10px 10px rgb(255, 255, 255);
+    animation-timing-function: steps(2, end);
+    text-shadow: -3px -3px 0px #104d94, 3px 3px 0px #4995cf;
+    background-color: transparent;
+    border: 3px solid #104d94;
+}
+
+button:hover {
+    text-shadow: -1px -1px 0px #104d94, 1px 1px 0px #4995cf;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid #104d94;
+    box-shadow: 0px 10px 10px -10px #104d94;
+}
+
+@keyframes glitch_4011 {
+    0% {
+        clip-path: var(--move1);
+        transform: translate(0px, -10px);
+    }
+
+    10% {
+        clip-path: var(--move2);
+        transform: translate(-10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--move3);
+        transform: translate(10px, 0px);
+    }
+
+    30% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    40% {
+        clip-path: var(--move5);
+        transform: translate(10px, -10px);
+    }
+
+    50% {
+        clip-path: var(--move6);
+        transform: translate(-10px, 10px);
+    }
+
+    60% {
+        clip-path: var(--move1);
+        transform: translate(10px, -10px);
+    }
+
+    70% {
+        clip-path: var(--move3);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--move2);
+        transform: translate(10px, -10px);
+    }
+
+    90% {
+        clip-path: var(--move4);
+        transform: translate(-10px, 10px);
+    }
+
+    100% {
+        clip-path: var(--move1);
+        transform: translate(0);
+    }
+}
+
+/* fin del header css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-from {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    transition: all .5s ease-out;
+}
+
+.welcome-back {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.messange {
+    padding: 1rem;
+}
+
+.messange h2 {
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+
+.messange button {
+    padding: 1rem;
+    font-weight: 400;
+    background-color: #2691d9;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+    margin-top: 2rem;
+    transition: all .3s ease-in;
+    color: #e9f4fb;
+}
+
+.messange button:hover {
+    background-color: #2691d9;
+}
+
+.formulario {
+    width: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgb(51, 51, 51, 0.602);
+    text-align: center;
+}
+
+.create-account {
+    padding: 2.7rem 0;
+    font-size: 1.7rem;
+}
+
+.iconos {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.border-icon {
+    height: 20px;
+    width: 20 px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: solid thin #e9f4fb;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all .3s ease-in;
+}
+
+.border-icon:hover {
+    background-color: #2691d9;
+    cursor: pointer;
+}
+
+.cuenta-Gratis {
+    padding: 2rem 0;
+}
+
+.formulario input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: #e9f4fb thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+    color: #e9f4fb;
+}
+
+.formulario input[type="button"] {
+    width: 60%;
+    margin: auto;
+    border: solid thin #e9f4fb;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: #e9f4fb;
+    font-weight: 600;
+    margin-top: .8rem;
+    cursor: pointer;
+    color: #333333;
+}
+
+/* css de Registrarse */
+.sign-in {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sign-in.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sign-up.active {
+    opacity: 0;
+    visibility: hidden;
+}
